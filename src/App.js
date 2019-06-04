@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import CardList from './components/CardList';
 import SearchBox from './components/SearchBox';
 import Scroll from './components/Scroll';
-import MouseTracker from './components/MouseTracker';
 import ErrorBoundary from './components/ErrorBoundary';
 import './App.css';
 
@@ -28,6 +27,7 @@ class App extends Component {
 
   render() {
     const { robots, searchField } = this.state;
+    // eslint-disable-next-line max-len
     const filteredRobots = robots.filter(robot => robot.name.toLowerCase().includes(searchField.toLowerCase()));
     return !robots.length
       ? <h1>Loading</h1>
@@ -43,7 +43,6 @@ class App extends Component {
 
         </div>
       );
-
   }
 }
 
