@@ -12,8 +12,12 @@ const mapStateToProps = state => ({
   searchField: state.searchField,
 });
 const mapDispatchToProps = dispatch => ({
-  onSearchChange: event => dispatch(setSearchField(event.target.value)),
+  onSearchChange: (event) => {
+    const { value } = event.target;
+    dispatch(setSearchField(value));
+  },
 });
+
 class App extends Component {
     state = {
       robots: [],
@@ -54,9 +58,11 @@ class App extends Component {
         );
     }
 }
-
+App.defaultProps = {
+  searchField: '',
+};
 App.propTypes = {
-  searchField: PropTypes.func.isRequired,
+  searchField: PropTypes.string,
   onSearchChange: PropTypes.func.isRequired,
 
 };
