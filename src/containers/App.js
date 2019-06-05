@@ -15,12 +15,13 @@ const mapStateToProps = state => ({
   error: state.requestRobots.error,
 });
 const mapDispatchToProps = dispatch => ({
+
   onSearchChange: (event) => {
     const { value } = event.target;
     dispatch(setSearchField(value));
   },
   onRequestRobots: () => {
-    requestRobots(dispatch);
+    dispatch(requestRobots()); // using redux thunk
   },
 });
 
@@ -35,7 +36,7 @@ class App extends Component {
     const { searchField, onSearchChange } = this.props;
     // eslint-disable-next-line max-len
     const filteredRobots = robots.filter(robot => robot.name.toLowerCase().includes(searchField.toLowerCase()));
-    return !isPending
+    return isPending
       ? <h1>Loading</h1>
       : (
         <div className="tc">
@@ -62,7 +63,6 @@ App.propTypes = {
   isPending: PropTypes.bool,
   onSearchChange: PropTypes.func.isRequired,
   onRequestRobots: PropTypes.func.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
   robots: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
     email: PropTypes.string,
@@ -73,8 +73,8 @@ App.propTypes = {
       city: PropTypes.string,
       zipcode: PropTypes.string,
       geo: PropTypes.shape({
-        lat: PropTypes.number,
-        lng: PropTypes.number,
+        lat: PropTypes.string,
+        lng: PropTypes.string,
       }),
     }),
     phone: PropTypes.string,
