@@ -42,11 +42,17 @@ class App extends Component {
         <div className="tc">
           <h1 className="f1">RoboFriends</h1>
           <SearchBox name="searchField" labelText="Search" searchField={searchField} onChange={onSearchChange} />
-          <Scroll>
-            <ErrorBoundary>
-              <CardList robots={filteredRobots} />
-            </ErrorBoundary>
-          </Scroll>
+          {error ? (<h2>{error}</h2>)
+
+            : (
+              <Scroll>
+                <ErrorBoundary>
+                  <CardList robots={filteredRobots} />
+                </ErrorBoundary>
+              </Scroll>
+            )
+
+          }
         </div>
       );
   }
