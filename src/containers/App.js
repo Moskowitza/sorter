@@ -48,7 +48,7 @@ class App extends Component {
             <Row>
               <h1 className="f1">RoboFriends</h1>
             </Row>
-            <SearchBox name="searchField" labelText="Search" searchField={searchField} onChange={onSearchChange} />
+            <SearchBox name="searchField" labelText="Search Robots" searchField={searchField} onChange={onSearchChange} />
           </Container>
           {error ? (<h2>{error}</h2>)
 
@@ -61,7 +61,6 @@ class App extends Component {
                 </ErrorBoundary>
               </Scroll>
             )
-
           }
         </div>
       );

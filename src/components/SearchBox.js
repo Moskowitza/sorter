@@ -8,21 +8,21 @@ const SearchBox = ({
 }) => (
   <Row>
     <Col>
-    <label htmlFor={name}>
-      <input
-        className="pa3 ba b--green bg-lightest-blue"
-        type="search"
-        aria-label={labelText}
-        aria-required="true"
-        placeholder={searchField}
-        onChange={onChange}
-        value={searchField}
-        id={name}
-        name={name}
-      />
-    </label>
-  </Col>
-    </Row>
+      <label htmlFor={name}>
+        <input
+          className="pa3 ba b--green bg-lightest-blue"
+          type="search"
+          aria-label={labelText}
+          aria-required="true"
+          placeholder={searchField}
+          onChange={onChange}
+          value={searchField}
+          id={name}
+          name={name}
+        />
+      </label>
+    </Col>
+  </Row>
 );
 SearchBox.defaultProps = {
   labelText: '',

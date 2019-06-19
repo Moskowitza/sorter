@@ -19,14 +19,17 @@ _BrowserslistError: Unknown browser query `android all`_
 
 _98_
 
-- [ ] Images come from api, should optimize
-- [ ] Ensure text remains visible during webfont load
+- [x] Images come from api, should optimize
+      _already come at 200x200_
+- [x] Ensure text remains visible during webfont load
+- in css file add `font-display: swap;`
 
 ### Accessibilty:
 
 _96_
 
-- [ ] fix color : contrast on .f1
+- [x] fix color : contrast on .f1
+      _darkened green_
 
 ### Best Practices
 
@@ -36,7 +39,9 @@ _100_
 
 _91_
 
-- [ ] Document does not have a meta description
+- [x] Document does not have a meta description
+      [meta Description](https://developers.google.com/web/tools/lighthouse/audits/description?utm_source=lighthouse&utm_medium=extension)
+      _`<meta name="Description" content="Aaron Moskowitz's Robot Sorter" />`_
 
 ### PWA
 
