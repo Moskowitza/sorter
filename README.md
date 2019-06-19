@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sorter App
 
-## Available Scripts
+Based on the demo from _The Complete Junior to Senior Developer Course_ on Udemy
 
-In the project directory, you can run:
+- React
+- Redux
+- added propTypes
+- react-bootstrap
+- deployed to gh-pages
 
-### `npm start`
+## Issues during deployment:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_BrowserslistError: Unknown browser query `android all`_
+[track](https://github.com/facebook/create-react-app/issues/7239)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## lighthouse report
 
-### `npm test`
+## Performance
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_98_
 
-### `npm run build`
+- [ ] Images come from api, should optimize
+- [ ] Ensure text remains visible during webfont load
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Accessibilty:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+_96_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [ ] fix color : contrast on .f1
 
-### `npm run eject`
+### Best Practices
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+_100_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### SEO
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+_91_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [ ] Document does not have a meta description
 
-## Learn More
+### PWA
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [ ] Failures: Manifest's `display` value is not one of: minimal-ui | fullscreen | standalone, Manifest does not have `short_name`.
+      [short_name](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-short_name)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [ ] Failures: Manifest does not have a PNG icon of at least 512px, Manifest does not have `background_color`, Manifest does not have `theme_color`.
+      [Splash Screen](https://developers.google.com/web/tools/lighthouse/audits/custom-splash-screen?utm_source=lighthouse&utm_medium=extension)
 
-### Code Splitting
+- [ ] Failures: Manifest does not have `theme_color`.
+      [Theme Color](https://developers.google.com/web/tools/lighthouse/audits/address-bar?utm_source=lighthouse&utm_medium=extension)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [ ] Does not provide a valid apple-touch-icon
+      [touch icon](https://developers.google.com/web/fundamentals/design-and-ux/browser-customization/?utm_source=lighthouse&utm_medium=extension)
