@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { setSearchField, requestRobots } from '../actions';
 import './App.css';
+
 
 const mapStateToProps = state => ({
   searchField: state.searchRobots.searchField,
@@ -40,14 +44,20 @@ class App extends Component {
       ? <h1>Loading</h1>
       : (
         <div className="tc">
-          <h1 className="f1">RoboFriends</h1>
-          <SearchBox name="searchField" labelText="Search" searchField={searchField} onChange={onSearchChange} />
+          <Container>
+            <Row>
+              <h1 className="f1">RoboFriends</h1>
+            </Row>
+            <SearchBox name="searchField" labelText="Search" searchField={searchField} onChange={onSearchChange} />
+          </Container>
           {error ? (<h2>{error}</h2>)
 
             : (
               <Scroll>
                 <ErrorBoundary>
-                  <CardList robots={filteredRobots} />
+                  <Container fluid="true">
+                    <CardList robots={filteredRobots} />
+                  </Container>
                 </ErrorBoundary>
               </Scroll>
             )

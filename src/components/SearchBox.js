@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 const SearchBox = ({
   labelText, name, searchField, onChange,
 }) => (
-  <div className="pa2">
+  <Row>
+    <Col>
     <label htmlFor={name}>
       <input
         className="pa3 ba b--green bg-lightest-blue"
@@ -18,7 +21,8 @@ const SearchBox = ({
         name={name}
       />
     </label>
-  </div>
+  </Col>
+    </Row>
 );
 SearchBox.defaultProps = {
   labelText: '',

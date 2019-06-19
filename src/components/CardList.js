@@ -1,22 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from './Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import RobotCard from './RobotCard';
 
 const CardList = ({ robots }) => (
-  <div>
-    {
-        robots.map((user, i) => (
-          <Card
-            key={robots[i].id}
-            id={robots[i].id}
-            name={robots[i].name}
-            email={robots[i].email}
-          />
-        ))
+
+  <Row>
+    {robots.map((robot, i) => (
+      <Col key={robots[i].id} sm>
+        <RobotCard
+          key={robots[i].id}
+          id={robots[i].id}
+          name={robots[i].name}
+          email={robots[i].email}
+        />
+      </Col>
+    ))
       }
-  </div>
+  </Row>
 
 );
+
 CardList.defaultProps = {
   robots: [],
 };
