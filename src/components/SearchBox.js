@@ -7,7 +7,7 @@ const SearchBox = ({
   labelText, name, searchField, onChange,
 }) => (
   <Row>
-    <Col>
+    <Col className="text-center">
       <label htmlFor={name}>
         <input
           className="pa3 ba b--green bg-lightest-blue"
