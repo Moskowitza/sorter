@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sorter/static/css/main.b5e05453.chunk.css",
-    "main.js": "/sorter/static/js/main.00e061ec.chunk.js",
-    "main.js.map": "/sorter/static/js/main.00e061ec.chunk.js.map",
+    "main.js": "/sorter/static/js/main.258722d3.chunk.js",
+    "main.js.map": "/sorter/static/js/main.258722d3.chunk.js.map",
     "runtime~main.js": "/sorter/static/js/runtime~main.a187db27.js",
     "runtime~main.js.map": "/sorter/static/js/runtime~main.a187db27.js.map",
-    "static/js/2.6dfce980.chunk.js": "/sorter/static/js/2.6dfce980.chunk.js",
-    "static/js/2.6dfce980.chunk.js.map": "/sorter/static/js/2.6dfce980.chunk.js.map",
+    "static/js/2.9ebcc20e.chunk.js": "/sorter/static/js/2.9ebcc20e.chunk.js",
+    "static/js/2.9ebcc20e.chunk.js.map": "/sorter/static/js/2.9ebcc20e.chunk.js.map",
     "index.html": "/sorter/index.html",
-    "precache-manifest.60d1679a26ca76440e165f86574add52.js": "/sorter/precache-manifest.60d1679a26ca76440e165f86574add52.js",
+    "precache-manifest.94ba9dfd9adeb1ba6e4c98f58fe736a3.js": "/sorter/precache-manifest.94ba9dfd9adeb1ba6e4c98f58fe736a3.js",
     "service-worker.js": "/sorter/service-worker.js",
     "static/css/main.b5e05453.chunk.css.map": "/sorter/static/css/main.b5e05453.chunk.css.map",
     "static/media/App.css": "/sorter/static/media/SEGA.12a3db8b.woff"
