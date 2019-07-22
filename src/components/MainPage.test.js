@@ -24,7 +24,7 @@ describe('MainPage', () => {
   it('renders MainPage', () => {
     expect(wrapper).toMatchSnapshot();
   });
-  it('filters correctly', () => {
+  it('filters correctly to show nothing', () => {
     const mockProps2 = {
       onRequestRobots: jest.fn(),
       onSearchChange: jest.fn(),
@@ -40,5 +40,33 @@ describe('MainPage', () => {
     };
     const wrapper2 = shallow(<MainPage {...mockProps2} />);
     expect(wrapper2.instance().filteredRobots()).toEqual([]);
+  });
+  it('filters correctly with response', () => {
+    const mockProps3 = {
+      onRequestRobots: jest.fn(),
+      onSearchChange: jest.fn(),
+      robots: [
+        {
+          id: 1,
+          name: 'toki',
+          email: 'toki@email.com',
+        },
+        {
+          id: 2,
+          name: 'eno',
+          email: 'eno@email.com',
+        },
+      ],
+      searchField: 'toki',
+      isPending: false,
+    };
+    const foundRobots = [{
+      email: 'toki@email.com',
+      id: 1,
+      name: 'toki',
+    }];
+    const wrapper3 = shallow(<MainPage {...mockProps3} />);
+    // eslint-disable-next-line no-undef
+    expect(wrapper3.instance().filteredRobots()).toEqual(foundRobots);
   });
 });
