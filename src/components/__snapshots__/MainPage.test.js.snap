@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage renders MainPage 1`] = `
+"<Fragment>
+  <Container fluid={false}>
+    <Bootstrap(Row)>
+      <Col className=\\"text-center\\">
+        <h1 className=\\"f1\\">
+           RoboFriends
+        </h1>
+      </Col>
+    </Bootstrap(Row)>
+    <SearchBox name=\\"searchField\\" labelText=\\"Search Robots\\" searchField=\\"\\" onChange={[Function: mockConstructor]} />
+  </Container>
+  <Scroll>
+    <ErrorBoundary>
+      <Container fluid=\\"true\\">
+        <CardList robots={{...}} />
+      </Container>
+    </ErrorBoundary>
+  </Scroll>
+</Fragment>"
+`;
